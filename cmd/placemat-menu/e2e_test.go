@@ -1,4 +1,4 @@
-package menu
+package main
 
 import (
 	"io/ioutil"
@@ -49,7 +49,7 @@ func TestE2E(t *testing.T) {
 		"sabakan/machines.json",
 	}
 
-	cmd := exec.Command("go", "run", "cmd/placemat-menu/main.go", "-f", "example.yml", "-o", dir)
+	cmd := exec.Command("go", "run", "main.go", "-f", "example.yml", "-o", dir)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	err = cmd.Run()

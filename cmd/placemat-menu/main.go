@@ -13,8 +13,8 @@ import (
 	"path/filepath"
 	"text/template"
 
-	"github.com/cybozu-go/placemat-menu"
-	_ "github.com/cybozu-go/placemat-menu/cmd/placemat-menu/statik"
+	_ "github.com/cybozu-go/placemat/cmd/placemat-menu/statik"
+	"github.com/cybozu-go/placemat/menu"
 	"github.com/rakyll/statik/fs"
 )
 

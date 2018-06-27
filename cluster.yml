@@ -1,0 +1,8 @@
+kind: Node
+name: boot
+spec:
+  bios: uefi
+  smbios:
+    serial: 1234abcd
+    manufacturer: cybozu
+    product: mk2

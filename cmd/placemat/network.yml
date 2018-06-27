@@ -1,0 +1,6 @@
+version: 2
+ethernets:
+  ens3:
+    addresses:
+      - 172.16.0.10
+    gateway4: 172.16.0.1

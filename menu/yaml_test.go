@@ -25,7 +25,7 @@ func testUnmarshalNetwork(t *testing.T) {
 			source: `
 kind: Network
 spec:
-  ipam-config: example_ipam.json
+  ipam-config: testdata/example_ipam.json
   asn-base: 64600
   internet: 10.0.0.0/24
   core-spine: 10.0.2.0/24
@@ -39,7 +39,7 @@ spec:
     ingress: 10.72.48.64/26
 `,
 			expected: NetworkMenu{
-				IPAMConfigFile: "example_ipam.json",
+				IPAMConfigFile: "testdata/example_ipam.json",
 				NodeBase:       net.ParseIP("10.69.0.0"),
 				NodeRangeSize:  6,
 				NodeRangeMask:  26,
@@ -71,7 +71,7 @@ spec:
 # Invalid CIDR @ internet
 kind: Network
 spec:
-  ipam-config: example_ipam.json
+  ipam-config: testdata/example_ipam.json
   asn-base: 64600
   internet: 10.0.0.0
   spine-tor: 10.0.1.0
@@ -84,7 +84,7 @@ spec:
 # Invalid IP address @ spine-tor
 kind: Network
 spec:
-  ipam-config: example_ipam.json
+  ipam-config: testdata/example_ipam.json
   asn-base: 64600
   internet: 10.0.0.0/24
   spine-tor: 10.0.1.0/31
